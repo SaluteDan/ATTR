@@ -17,7 +17,7 @@
 </head>
 <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
   <div class="container-lg">
-    <span class="navbar-brand mb-0">ATTRIBUTES</span>
+    <span class="navbar-brand mb-0">ATTR.</span>
     <button id="coin-balance" type="button" class="btn btn-sm btn-secondary">ATTR.</button>
   </div>
 </nav>
@@ -29,7 +29,7 @@
       <div class="col">
         <div class="card">
           <div class="card-header">
-            CURRENT DRAW
+            <span class="collection-name"></span>
             <span class="badge rounded-pill bg-dark float-end">COST: <span class="mint-cost"></span></span>
           </div>
           <canvas id="canvas"></canvas>
@@ -38,6 +38,7 @@
             <!-- Input Elements For Attribute Options & Staked Points -->
             <div id="input-container" class=""><!-- Dynamically Loaded   -->
               <div id="nav-wrapper"></div>
+              <div id="input-total"></div>
               <div class="d-flex mb-3 justify-content-between">
                 <div class="btn-group" role="group" aria-label="Basic example">  
                   <button class="btn btn-primary" id="redraw">DRAW</button>
@@ -62,7 +63,7 @@
               </div>
           
               <div class="heading">
-                <div class="display-3">CONTRACT</div>
+                <div class="display-1">CONTRACT</div>
           
                 <h6>DETAILS:</h6>
               </div>
@@ -73,22 +74,28 @@
                 <div class="value col collection-name">MANY TRIBEs</div>
               </div>
           
-              <div class="row flex-nowrap">
+              <!-- <div class="row flex-nowrap">
                 <div class="label col">attributes STAKED:</div>
           
                 <div class="value col">2/10</div>
-              </div>
+              </div> -->
           
               <div class="row flex-nowrap">
                 <div class="label col">MINT FEE:</div>
           
-                <div class="value col mint-cost">100</div>
+                <div class="value col mint-cost"></div>
               </div>
           
               <div class="row flex-nowrap">
-                <div class="label col">COINS SPENT:</div>
+                <div class="label col">POINTS STAKED:</div>
           
                 <div class="value col points-staked">10,00</div>
+              </div>
+
+              <div class="row flex-nowrap">
+                <div class="label col">POINTS AFTER TOKEN:</div>
+          
+                <div class="value col points-staked">60,00</div>
               </div>
           
               <div class="small">
