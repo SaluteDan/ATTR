@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ATTR. ART ENGINE --ALPHA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+  <link href="./src/css/overrides.sass" rel="stylesheet">
+  <link href="./src/css/style.css" rel="stylesheet">
+</head>
+<nav class="navbar bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-lg">
+    <span class="navbar-brand mb-0">ATTR.</span>
+    <button id="coin-balance" type="button" class="btn btn-sm btn-secondary">ATTR.</button>
+  </div>
+</nav>
+
+<body>
+  <div class="container">
+    <div class="row flex-nowrap align-items-center justify-content-center flex-column">
+
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <span class="collection-name"></span>
+            <span class="badge rounded-pill bg-dark float-end">COST: <span class="mint-cost"></span></span>
+          </div>
+          <canvas id="canvas"></canvas>
+          <div label="meta-data" class="meta-data">
+            <small>META-DATA</small>
+            <!-- Input Elements For Attribute Options & Staked Points -->
+            <div id="input-container" class=""><!-- Dynamically Loaded   -->
+              <div id="nav-wrapper"></div>
+              <div id="input-total"></div>
+              <div class="d-flex mb-3 justify-content-between">
+                <div class="btn-group" role="group" aria-label="Basic example">  
+                  <button class="btn btn-primary" id="redraw">DRAW</button>
+                  <button class="btn btn-link small" id="reset-count">RESET COUNT</button>
+                </div>  
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#stake-modal">MINT TOKEN</button>
+              </div>
+            </div>
+          </div>
+        <!-- Input Elements For Attribute Options & Staked Points -->
+        <div class="d-flex align-items-center justify-content-center">
+          <div id="attribute1Weight"></div>
+          <div id="attribute2Weight"></div>
+          <div id="attribute3Weight"></div>
+          <!-- Button to generate the art -->
+        </div>
+        <div class="modal" id="stake-modal" tabindex="-1">
+          <div class="overlay modal-dialog">
+            <div class="content">
+              <div class="badge">
+                <div class="mint">TEIR 1 TOKEN MEMBER</div>
+              </div>
+          
+              <div class="heading">
+                <div class="display-1">CONTRACT</div>
+          
+                <h6>DETAILS:</h6>
+              </div>
+          
+              <div class="row flex-nowrap">
+                <div class="label col">COLLECTION:</div>
+          
+                <div class="value col collection-name">MANY TRIBEs</div>
+              </div>
+          
+              <!-- <div class="row flex-nowrap">
+                <div class="label col">attributes STAKED:</div>
+          
+                <div class="value col">2/10</div>
+              </div> -->
+          
+              <div class="row flex-nowrap">
+                <div class="label col">MINT FEE:</div>
+          
+                <div class="value col mint-cost"></div>
+              </div>
+          
+              <div class="row flex-nowrap">
+                <div class="label col">POINTS STAKED:</div>
+          
+                <div class="value col points-staked">10,00</div>
+              </div>
+
+              <div class="row flex-nowrap">
+                <div class="label col">POINTS AFTER TOKEN:</div>
+          
+                <div class="value col points-staked">60,00</div>
+              </div>
+          
+              <div class="small">
+                You about to lose any progress made in the mint &amp; staking process
+                please confirm you look to start again and view another randly generated
+                piece to build from
+              </div>
+            </div>
+          
+            <div class="footer modal-footer">
+              <div class="btn" data-bs-dismiss="modal" type="button" data-bs-dismiss="modal">
+                <div class="mint--fee-300-">CANCEL</div>
+              </div>
+              <div class="btn btn-secondary" type="button">
+                <div class="view-collection">CONFIRM</div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+</body>
+<script src="init.js" type="module"></script>
+<script src="art-engine.js" type="module"></script>
+</html>
