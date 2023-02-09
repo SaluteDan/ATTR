@@ -9,6 +9,7 @@ body {
 }
 .small, small {
     font-size: 0.6rem !important;
+    margin: 0 10px;
 }
 #canvas {
     margin: 60px auto;
@@ -35,7 +36,7 @@ input[type=number]::-webkit-outer-spin-button {
     max-width: 3rem;
     padding: .5rem;
     border: solid #ddd;
-    border-width: 0 2px;
+    border-width: 0;
     font-size: 1.4rem;
     height: 2rem;
     font-weight: bold;
@@ -80,8 +81,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .nav-pills {
     --bs-nav-pills-border-radius: 0.8rem;
-    --bs-nav-pills-link-active-color: rgb(255, 255, 255);
-    --bs-nav-pills-link-active-bg: rgba(0, 0, 0, 0.256);
+    --bs-nav-pills-link-active-color:
+    rgb(255, 255, 255);
+    --bs-nav-pills-link-active-bg:
+    rgb(24 24 24);
 }
 .Overlay {
     /* Auto layout */
@@ -138,4 +141,11 @@ input[type=number]::-webkit-outer-spin-button {
 .btn:hover {
     background-color: rgb(24, 24, 24);
     border-color: rgb(50, 50, 50);
+}
+.attribute-option .badge {
+    line-height: 17px;
+    font-size: 9px;
+}
+.modal-dialog {
+    pointer-events: auto;
 }
